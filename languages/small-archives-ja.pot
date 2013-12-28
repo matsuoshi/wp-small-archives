@@ -1,0 +1,28 @@
+# SmallArchives
+msgid ""
+msgstr ""
+"Project-Id-Version: small-archives\n"
+"POT-Creation-Date: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: h.matsuo\n"
+"Language: ja\n"
+"X-Generator: Poedit 1.6.3\n"
+
+msgid "Archives"
+msgstr "アーカイブ"
+
+msgid "Title:"
+msgstr "タイトル:"
+
+msgid "Reverse year order"
+msgstr "年の表示を降順にする"
+
+msgid "Reverse month order"
+msgstr "月の表示を降順にする"
+
+msgid "Show post counts"
+msgstr "投稿数を表示"
