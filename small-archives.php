@@ -7,6 +7,8 @@ Plugin URI: https://github.com/matsuoshi/wp-small-archives
 Author: h.matsuo
 Author URI: https://github.com/matsuoshi/
 License: GPLv2
+Text Domain: small-archives
+Domain Path: /languages
 */
 
 /**
@@ -14,12 +16,16 @@ License: GPLv2
  */
 class SmallArchivesWidget extends WP_Widget
 {
+	public $text_domain = 'small-archives';
+
+
 	/**
 	 * constructor
 	 */
 	function __construct()
 	{
 		add_action('get_header', array($this, 'addCss'));
+		load_plugin_textdomain($this->text_domain, false, dirname(plugin_basename(__FILE__)) . '/languages');
 
 		parent::__construct(false, 'Small Archives');
 	}
