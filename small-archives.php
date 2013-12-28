@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Small Archives
-Description: monthly archive widget, display smaller list.
+Description: monthly archive widget, display smaller list in the sidebar.
 Version: 1.0
 Plugin URI: https://github.com/matsuoshi/wp-small-archives
 Author: h.matsuo
@@ -42,7 +42,7 @@ class SmallArchivesWidget extends WP_Widget
 
 		echo $before_widget;
 
-		$title = ($instance['title']) ? : __('Archives', $this->text_domain);
+		$title = (! empty($instance['title'])) ? $instance['title'] : __('Archives', $this->text_domain);
 		echo $before_title . apply_filters('widget_title', $title) . $after_title;
 
 		$archives = $this->getArchives($instance);
@@ -53,9 +53,9 @@ class SmallArchivesWidget extends WP_Widget
 ?>
 			<ul class="smallArchivesYearList">
 			<?php
-			foreach ($archives as $year => $a) :
+			foreach ($archives as $year => $archive) :
 				if (! empty($instance['reverseMonthOrder'])) {
-					krsort($a);
+					krsort($archive);
 				}
 				$year_url = get_year_link($year);
 			?>
@@ -63,7 +63,7 @@ class SmallArchivesWidget extends WP_Widget
 					<span><a href="<?php echo $year_url ?>"><?php echo $year ?></a></span>
 					<ul class="smallArchivesMonthList">
 					<?php
-					foreach ($a as $month => $count) :
+					foreach ($archive as $month => $count) :
 
 						$month_after = ($instance['showPostCount']) ? "<span>({$count})</span>" : '';
 						$month_link = get_archives_link(get_month_link($year, $month), $month, $format, $before, $month_after . $after);
@@ -158,6 +158,7 @@ class SmallArchivesWidget extends WP_Widget
 			'reverseMonthOrder' => false,
 			'showPostCount' => false,
 		));
+
 		$title = strip_tags($instance['title']);
 		$reverseYearOrder = $instance['reverseYearOrder'] ? 'checked="checked"' : '';
 		$reverseMonthOrder = $instance['reverseMonthOrder'] ? 'checked="checked"' : '';
