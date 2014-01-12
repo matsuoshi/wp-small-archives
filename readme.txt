@@ -4,7 +4,7 @@ Tags: archive, archives, widget
 Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: 1.0
-License: GPLv2
+License: GPLv2 or later
 
 Small Archives is monthly archive widget, display smaller list.
 
@@ -12,18 +12,18 @@ Small Archives is monthly archive widget, display smaller list.
 
 Small Archives is monthly archive widget, display smaller list in the sidebar.
 
-[before]
-Dec. 2013
-Nov. 2013
-Oct. 2013
-Sep. 2013
+= [before] =
+Dec. 2013  
+Nov. 2013  
+Oct. 2013  
+Sep. 2013  
 ...
 
-[after]
-2013
-1 2 3 4 5 6 7 8 9 10 11 12
-2012
-1 2 3 4 5 6 7 8 9 10 11 12
+= [after] =
+2013  
+1 2 3 4 5 6 7 8 9 10 11 12  
+2012  
+1 2 3 4 5 6 7 8 9 10 11 12  
 ...
 
 == Installation ==
@@ -32,6 +32,12 @@ Sep. 2013
 
 2. Activate the plugin through the Plugins menu in WordPress.
 
+== Screenshots ==
+
+1. before / after
+
+2. setting menu
+
 == Changelog ==
 = 1.0 =
-* 2013.12 first version.
+* 2014.1: first version.
