@@ -2,7 +2,7 @@
 /*
 Plugin Name: Small Archives
 Description: monthly archive widget, display smaller list in the sidebar.
-Version: 1.0
+Version: 1.1
 Plugin URI: https://github.com/matsuoshi/wp-small-archives
 Author: h.matsuo
 Author URI: https://github.com/matsuoshi/
@@ -39,13 +39,17 @@ class SmallArchivesWidget extends WP_Widget
 	function widget($args, $instance)
 	{
 		extract($args);
+		/** @var string $before_widget */
+		/** @var string $before_title */
+		/** @var string $after_title */
+		/** @var string $after_widget */
 
 		echo $before_widget;
 
 		$title = (! empty($instance['title'])) ? $instance['title'] : __('Archives', $this->text_domain);
 		echo $before_title . apply_filters('widget_title', $title) . $after_title;
 
-		$archives = $this->getArchives($instance);
+		$archives = $this->getArchives();
 		if ($archives) {
 			if (! empty($instance['reverseYearOrder'])) {
 				krsort($archives);
@@ -66,7 +70,7 @@ class SmallArchivesWidget extends WP_Widget
 					foreach ($archive as $month => $count) :
 
 						$month_after = ($instance['showPostCount']) ? "<span>({$count})</span>" : '';
-						$month_link = get_archives_link(get_month_link($year, $month), $month, $format, $before, $month_after . $after);
+						$month_link = get_archives_link(get_month_link($year, $month), $month, '', '', $month_after);
 					?>
 						<li><?php echo $month_link ?></li>
 					<?php endforeach; ?>
@@ -83,10 +87,9 @@ class SmallArchivesWidget extends WP_Widget
 
 	/**
 	 * call query
-	 * @param $instance
 	 * @return array
 	 */
-	function getArchives($instance)
+	function getArchives()
 	{
 		global $wpdb;
 

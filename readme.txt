@@ -2,8 +2,8 @@
 Contributors: h.matsuo
 Tags: archive, archives, widget
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.0
+Tested up to: 4.5
+Stable tag: 1.1
 License: GPLv2 or later
 
 Small Archives is monthly archive widget, display smaller list.
@@ -39,5 +39,8 @@ Sep. 2013
 2. setting menu
 
 == Changelog ==
+= 1.1 =
+* 2016.6: fix notice error
+
 = 1.0 =
 * 2014.1: first version.
