@@ -2,9 +2,9 @@
 /*
 Plugin Name: Small Archives
 Description: monthly archive widget, display smaller list in the sidebar.
-Version: 1.1
+Version: 1.1.1
 Plugin URI: https://github.com/matsuoshi/wp-small-archives
-Author: h.matsuo
+Author: matsuoshi
 Author URI: https://github.com/matsuoshi/
 License: GPLv2
 Text Domain: small-archives
