@@ -12,6 +12,9 @@ Small Archives is monthly archive widget, display smaller list.
 
 Small Archives is monthly archive widget, display smaller list in the sidebar.
 
+- GitHub: <https://github.com/matsuoshi/wp-small-archives/>
+- WordPress plugin page: <https://wordpress.org/plugins/small-archives/>
+
 = [before] =
 Dec. 2013  
 Nov. 2013  
