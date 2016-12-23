@@ -2,7 +2,7 @@
 Contributors: matsuoshi
 Tags: archive, archives, widget
 Requires at least: 3.0
-Tested up to: 4.6
+Tested up to: 4.7
 Stable tag: 1.1.2
 License: GPLv2 or later
 
